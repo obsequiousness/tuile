@@ -9,6 +9,7 @@ pub const BaseColor = enum {
     magenta,
     cyan,
     white,
+    none,
 };
 
 pub const Rgb = struct {
@@ -80,6 +81,8 @@ pub const Color = union(enum) {
         if (eql(str, "bright magenta")) return .{ .bright = .magenta };
         if (eql(str, "bright cyan")) return .{ .bright = .cyan };
         if (eql(str, "bright white")) return .{ .bright = .white };
+
+        if (eql(str, "none")) return .{ .dark = .none };
 
         if (eql(str, "black")) return .{ .rgb = Rgb.black() };
         if (eql(str, "red")) return .{ .rgb = Rgb.red() };

@@ -87,6 +87,7 @@ const RustBaseColor = enum(u8) {
     magenta,
     cyan,
     white,
+    none,
 };
 
 extern fn crossterm_init() void;

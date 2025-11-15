@@ -56,7 +56,11 @@ pub fn build(b: *std.Build) void {
                 }
                 std.log.info("Using prebuilt crossterm backend for target {}", .{rust_target});
                 const prebuilt = prebuilt_opt.?;
-                crossterm_lib_path = prebuilt.path("libtuile_crossterm.a");
+                crossterm_lib_path = build_crab.addStripSymbols(b, .{
+                    .name = "libtuile_crossterm.a",
+                    .archive = prebuilt.path("libtuile_crossterm.a"),
+                    .symbols = &.{"___chkstk_ms"},
+                });
             } else {
                 const tuile_crossterm_opt = b.lazyDependency("tuile-crossterm", .{});
                 if (tuile_crossterm_opt == null) {

@@ -9,9 +9,8 @@
             // .lazy = true,
         },
         .@"tuile-crossterm" = .{
-            .url = "https://github.com/akarpovskii/tuile-crossterm/archive/refs/tags/v0.1.4.tar.gz",
-            .hash = "12207a56bb24860aa8a8984c3ae331ef547f2cdaa84981067c6930f1debf9f81fac6",
-            .lazy = true,
+            .url = "../tuile-crossterm/",
+            .hash = "1220ee148127809d9869728203666d1127d52b8f70f35a470819f3ba71b916a06a76",
         },
         .@"tuile-crossterm-aarch64-apple-darwin" = .{
             .url = "https://github.com/akarpovskii/tuile-crossterm/releases/download/v0.1.4/libtuile_crossterm-aarch64-apple-darwin.tar.gz",
@@ -39,9 +38,7 @@
             .lazy = true,
         },
         .@"tuile-crossterm-x86_64-pc-windows-gnu" = .{
-            .url = "https://github.com/akarpovskii/tuile-crossterm/releases/download/v0.1.4/libtuile_crossterm-x86_64-pc-windows-gnu.tar.gz",
-            .hash = "1220f1e1153c97c92cbe19248ccc7af08af896a4678ad6608ec0e597353c0226ed15",
-            .lazy = true,
+            .path = "../tuile-crossterm/releases/x86_64-pc-windows-gnu",
         },
         .@"tuile-crossterm-x86_64-unknown-linux-gnu" = .{
             .url = "https://github.com/akarpovskii/tuile-crossterm/releases/download/v0.1.4/libtuile_crossterm-x86_64-unknown-linux-gnu.tar.gz",

@@ -44,6 +44,11 @@ pub const Span = struct {
         self.text.deinit();
     }
 
+    pub fn clearRetainingCapacity(self: *Span) void {
+        self.text.clearRetainingCapacity();
+        self.chunks.clearRetainingCapacity();
+    }
+
     pub fn clone(self: *Span) !Span {
         return Span{
             .text = try self.text.clone(),
